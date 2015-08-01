@@ -5,7 +5,8 @@ exports.sortArray = function(arrayToSort) {
     return sortArrayInPlace(arrayToSort);
 }
 
-function sortArrayInPlace(arrayToSort) {
+function sortArrayInPlace(arrayToSortOriginal) {
+    var arrayToSort = arrayToSortOriginal.slice();
     for(var i = 1; i < arrayToSort.length; i++) {
         for (var j = 0; j < arrayToSort.length; j++) {
             if (arrayToSort[i] <= arrayToSort[j]) { 
